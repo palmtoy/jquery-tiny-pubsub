@@ -8,9 +8,12 @@
   <!-- Load local QUnit. -->
   <link rel="stylesheet" href="libs/qunit/qunit.css" media="screen">
   <script src="libs/qunit/qunit.js"></script>
+
   <!-- Load local lib and tests. -->
-  <script src="src/tiny-pubsub.js"></script>
-  <script src="views/tiny-pubsub_test.js"></script>
+  <% tinyPSFile = tinyPSPath + '/tiny-pubsub.js'%>
+  <script src=<%= tinyPSFile%>></script>
+
+  <script src=<%= testFilePath%>></script>
   <!-- Removing access to jQuery and $. But it'll still be available as _$, if
        you REALLY want to mess around with jQuery in the console. REMEMBER WE
        ARE TESTING A PLUGIN HERE, THIS HELPS ENSURE BEST PRACTICES. REALLY. -->
