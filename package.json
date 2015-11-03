@@ -7,6 +7,10 @@
   "scripts": {
     "test": "grunt qunit"
   },
+  "dependencies": {
+    "ejs": "^2.3.4",
+    "express": "^4.13.3"
+  },
   "devDependencies": {
     "grunt-contrib-clean": "~0.4.0rc6",
     "grunt-contrib-jshint": "0.1.1rc6",
