@@ -15,22 +15,12 @@ module.exports = function(grunt) {
     clean: {
       src: ['dist']
     },
-    concat: {
-      options: {
-        banner: '<%= banner %>',
-        stripBanners: true
-      },
-      dist: {
-        src: ['src/<%= pkg.name %>.js'],
-        dest: 'dist/ba-<%= pkg.name %>.js'
-      },
-    },
     uglify: {
       options: {
         banner: '<%= banner %>'
       },
       dist: {
-        src: '<%= concat.dist.dest %>',
+        src: 'src/<%= pkg.name %>.js',
         dest: 'dist/ba-<%= pkg.name %>.min.js'
       },
     }
@@ -38,10 +28,9 @@ module.exports = function(grunt) {
 
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
   // Default task.
-  grunt.registerTask('default', ['clean', 'concat', 'uglify']);
+  grunt.registerTask('default', ['clean', 'uglify']);
 
 };
