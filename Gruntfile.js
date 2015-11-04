@@ -17,14 +17,20 @@ module.exports = function(grunt) {
 				src: ['src/*.js', 'views/*.js', 'libs/**/**/**/*.js'],
 				dest: './'
 			}
+		},
+		'json-minify': {
+			build: {
+				files: 'config/**/*.json'
+			}
 		}
 	});
 
 	// These plugins provide necessary tasks.
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-json-minify');
 
 	// Default task.
-	grunt.registerTask('default', ['clean', 'uglify']);
+	grunt.registerTask('default', ['clean', 'uglify', 'json-minify']);
 
 };
