@@ -22,15 +22,28 @@ module.exports = function(grunt) {
 			build: {
 				files: 'config/**/*.json'
 			}
+		},
+
+		htmlmin: {
+			dist: {
+				options: {
+					removeComments: true,
+					collapseWhitespace: true
+				},
+				files: {
+					'dist/tiny-pubsub.html': 'views/tiny-pubsub.html'
+				}
+			}
 		}
 	});
 
 	// These plugins provide necessary tasks.
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 	grunt.loadNpmTasks('grunt-json-minify');
 
 	// Default task.
-	grunt.registerTask('default', ['clean', 'uglify', 'json-minify']);
+	grunt.registerTask('default', ['clean', 'uglify', 'json-minify', 'htmlmin:dist']);
 
 };
