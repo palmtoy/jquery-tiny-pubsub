@@ -13,7 +13,7 @@ module.exports = function(grunt) {
     uglify: {
       dist: {
         src: 'src/<%= pkgname %>.js',
-        dest: 'dist/ba-<%= pkgname %>.min.js'
+        dest: 'src/<%= pkgname %>.js',
       },
     }
   });

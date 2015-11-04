@@ -5,12 +5,12 @@ var app = express();
 var port = 8086;
 
 app.use('/libs', express.static(__dirname + '/libs'));
-app.use('/dist', express.static(__dirname + '/dist'));
+app.use('/src', express.static(__dirname + '/src'));
 app.use('/views', express.static(__dirname + '/views'));
 
 app.all('*', function(req, res, next){
 	res.locals = {
-		tinyPSPath: 'dist',
+		tinyPSPath: 'src',
 		testFilePath: 'views/tiny-pubsub_test.js'
 	};
 	next();
