@@ -30,7 +30,7 @@ module.exports = function(grunt) {
 					collapseWhitespace: true
 				},
 				files: {
-					'views/tiny-pubsub.html': 'views/tiny-pubsub.html'
+					'views/pubsub_test.html': 'views/pubsub_test.html'
 				}
 			}
 		}
