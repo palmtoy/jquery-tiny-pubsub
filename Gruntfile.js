@@ -14,7 +14,7 @@ module.exports = function(grunt) {
 			target : {
 				expand: true,
 				cwd: './',
-				src: ['src/*.js', 'views/*.js', 'libs/*.js'],
+				src: ['src/*.js', 'views/*.js', 'libs/**/**/**/*.js'],
 				dest: './'
 			}
 		}
