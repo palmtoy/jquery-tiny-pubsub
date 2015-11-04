@@ -29,9 +29,12 @@ module.exports = function(grunt) {
 					removeComments: true,
 					collapseWhitespace: true
 				},
-				files: {
-					'views/pubsub_test.html': 'views/pubsub_test.html'
-				}
+				files: [{
+					expand: true,
+					cwd: './',
+					src: ['views/**/*.html'],
+					dest: './'
+				}]
 			}
 		}
 	});
@@ -43,6 +46,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-json-minify');
 
 	// Default task.
-	grunt.registerTask('default', ['clean', 'uglify', 'json-minify', 'htmlmin:dist']);
+	grunt.registerTask('default', ['clean', 'uglify', 'json-minify', 'htmlmin']);
 
 };
