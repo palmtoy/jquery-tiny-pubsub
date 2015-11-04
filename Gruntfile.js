@@ -9,13 +9,15 @@ module.exports = function(grunt) {
     // Task configuration.
     clean: {
       src: ['dist']
-    },
-    uglify: {
-      dist: {
-        src: 'src/<%= pkgname %>.js',
-        dest: 'src/<%= pkgname %>.js',
-      },
-    }
+		},
+		uglify: {
+			target : {
+				expand: true,
+				cwd: './',
+				src: ['src/*.js', 'views/*.js'],
+				dest: './'
+			}
+		}
   });
 
   // These plugins provide necessary tasks.
