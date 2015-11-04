@@ -23,7 +23,6 @@ module.exports = function(grunt) {
 				files: 'config/**/*.json'
 			}
 		},
-
 		htmlmin: {
 			dist: {
 				options: {
@@ -31,7 +30,7 @@ module.exports = function(grunt) {
 					collapseWhitespace: true
 				},
 				files: {
-					'dist/tiny-pubsub.html': 'views/tiny-pubsub.html'
+					'views/tiny-pubsub.html': 'views/tiny-pubsub.html'
 				}
 			}
 		}
