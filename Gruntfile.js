@@ -26,20 +26,14 @@ module.exports = function(grunt) {
 					dest: './'
 				}]
 			}
-		},
-		'json-minify': {
-			build: {
-				files: 'shadowengine/**/**/**/**/**/**/*.json'
-			}
 		}
 	});
 
 	// These plugins provide necessary tasks.
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
-	grunt.loadNpmTasks('grunt-json-minify');
 
 	// Default task.
-	grunt.registerTask('default', ['uglify', 'htmlmin', 'json-minify']);
+	grunt.registerTask('default', ['uglify', 'htmlmin']);
 
 };
