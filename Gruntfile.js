@@ -9,7 +9,7 @@ module.exports = function(grunt) {
 			target : {
 				expand: true,
 				cwd: './',
-				src: ['shadowengine/**/**/**/**/**/**/*.js'],
+				src: ['shadowengine/**/**/**/**/**/*.js'],
 				dest: './'
 			}
 		},
@@ -22,7 +22,7 @@ module.exports = function(grunt) {
 				files: [{
 					expand: true,
 					cwd: './',
-					src: ['shadowengine/**/**/**/**/**/**/*.html'],
+					src: ['shadowengine/**/**/**/**/**/*.html'],
 					dest: './'
 				}]
 			}
