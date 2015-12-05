@@ -3,3 +3,5 @@ dist/*
 scripts/
 shadowengine/
 shadowengine.tgz
+clear.sh
+restore.sh
