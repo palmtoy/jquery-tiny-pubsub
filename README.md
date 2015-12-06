@@ -1,3 +1,10 @@
+./clear.sh
+grunt
+./restore.sh
+
+=====================
+=====================
+
 # jQuery Tiny Pub/Sub
 
 A really, really, REALLY tiny pub/sub implementation for jQuery.
